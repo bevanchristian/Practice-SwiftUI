@@ -10,9 +10,16 @@ import SwiftUI
 
 // di dalam body tempat kamu buat desaine
 struct ContentView: View {
+  
+
     var body: some View {
-        //halaman pertama
-        LandmarkList()
+        
+        TabView {
+            //halaman pertama
+            LandmarkList().tabItem { Label("List", systemImage: "list.bullet") }
+            CategoryHome().tabItem { Label("featured", systemImage: "star") }
+    }
+      
     }
 }
 

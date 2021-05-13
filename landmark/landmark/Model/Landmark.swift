@@ -24,6 +24,13 @@ struct Landmark:Hashable,Codable,Identifiable {
     var image:Image{
         Image(imageName)
     }
+    var isFeatured:Bool
+    var category:Category
+    enum Category:String,CaseIterable,Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
     var coordinates:Coordinates
     
     // ketika coordinates masuk maka langsung diubah jadi clcordinate
